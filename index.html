@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ученический совет</title>
+
+  <style>
+    /* =========================
+       НАСТРОЙКИ ТЕМЫ
+       ========================= */
+    :root {
+      --blue: #1e88e5;
+      --light-blue: #e3f2fd;
+      --bg: white;
+      --text: #1f2937;
+      --card: #f9fbff;
+    }
+
+    body.dark {
+      --bg: #0f172a;
+      --text: #f1f5f9;
+      --light-blue: #1e293b;
+      --card: #162033;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: 0.3s;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--blue), #42a5f5);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      background-color: var(--light-blue);
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--blue);
+      font-weight: bold;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      color: var(--blue);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+    }
+
+    .card {
+      background-color: var(--card);
+      border-left: 5px solid var(--blue);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+    }
+
+    /* Кнопка переключения темы */
+    .theme-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: var(--light-blue);
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ШАПКА -->
+  <header>
+    <button class="theme-btn" onclick="toggleTheme()">🌙 Тема</button>
+    <h1>Ученический совет</h1>
+    <p>Вместе делаем школьную жизнь лучше</p>
+  </header>
+
+  <!-- НАВИГАЦИЯ -->
+  <nav>
+    <a href="#about">О нас</a>
+    <a href="#members">Роли</a>
+    <a href="#charter">Устав</a>
+    <a href="#feedback">Обратная связь</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+
+  <!-- О НАС -->
+  <section id="about">
+    <h2>О нас</h2>
+    <div class="card">
+      <p>
+        Ученический совет — это орган школьного самоуправления,
+        который представляет интересы учеников и организует инициативы.
+      </p>
+    </div>
+  </section>
+
+  <!-- РОЛИ (7) -->
+  <section id="members">
+    <h2>Основные роли совета</h2>
+    <div class="card">
+      <ul>
+        <li>Президент</li>
+        <li>Вице-президент</li>
+        <li>Секретарь</li>
+        <li>Координатор культурных мероприятий</li>
+        <li>Координатор спортивных инициатив</li>
+        <li>Медиа-координатор</li>
+        <li>Координатор социальных проектов</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- УСТАВ -->
+  <section id="charter">
+    <h2>Устав Ученического Совета</h2>
+    <div class="card">
+      <p>
+        Для подробного ознакомления с правилами и структурой работы совета
+        вы можете прочитать официальный документ:
+      </p>
+      <p>
+        📄 <a href="Устав Ученического Совета.docx" download>
+          Скачать «Устав Ученического Совета»
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ОБРАТНАЯ СВЯЗЬ -->
+  <section id="feedback">
+    <h2>Форма обратной связи</h2>
+    <div class="card">
+      <p>Вы можете отправить нам идею, проблему или заявку в команду:</p>
+      <form>
+        <label>Ваше имя:</label><br>
+        <input type="text" style="width:100%;padding:8px" /><br><br>
+
+        <label>Сообщение:</label><br>
+        <textarea style="width:100%;padding:8px" rows="4"></textarea><br><br>
+
+        <button type="submit">Отправить</button>
+      </form>
+      <p style="margin-top:10px;font-size:0.9rem;opacity:0.8;">
+        (Чтобы сообщения приходили прямо на почту, лучше подключить Google Forms.)
+      </p>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <div class="card">
+      <p>Email: <strong>diplomatsovet@gmail.com</strong></p>
+      <p>Telegram канал: <a href="https://t.me/DISSTUDENTSCOUNCIL">@DISSTUDENTSCOUNCIL</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Ученический совет | Учебный сайт
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+
+</body>
+</html>
